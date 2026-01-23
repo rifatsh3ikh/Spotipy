@@ -70,7 +70,6 @@ class MusicPlayer(ctk.CTk):
         self.add_btn.pack(pady=10)
 
     def update_volume(self, value):
-        """Updates the mixer volume and the text label percentage"""
         pygame.mixer.music.set_volume(value)
         percent = int(value * 100)
         self.volume_percent_label.configure(text=f"{percent}%")
